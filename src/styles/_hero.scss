@@ -8,7 +8,7 @@
     background-size: cover;
 
     @media (max-height: 768px) {
-        background-image: url(../images/hero_celular.jpeg);
+        background-image: url(../../dist/images/hero_celular.jpeg);
         padding-top: calc(50vw + 25px);
         background-size: contain;
         background-repeat: no-repeat;
