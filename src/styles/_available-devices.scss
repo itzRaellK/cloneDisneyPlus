@@ -1,6 +1,10 @@
 .available-devices {
     padding: 5.6vw;
 
+    @media (min-width: 768px) and (max-width: 1023px) {
+        margin-top: 50px;
+    }
+
     h2 {
         text-align: center;
         margin-bottom: 24px;
@@ -11,7 +15,7 @@
         gap: 24px;
         grid-template-columns: repeat(4, 1fr);
 
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             grid-template-columns: 1fr 1fr;
         }
 

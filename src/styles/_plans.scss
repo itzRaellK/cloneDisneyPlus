@@ -8,24 +8,40 @@
     &__list {
         display: flex;
         justify-content: space-around;
-        margin-top: 50px;
+        margin-top: 30px;
 
-        @media (max-width: 768px) {
+        @media (min-width: 768px) and (max-width: 1023px){
+            display: block;
+            padding: 0;
+        }
+
+        @media (max-width: 767px) {
             display: block;
             margin-top: 20px;
         }
 
         .button {
             margin-top: 24px;
+
+            @media (min-width: 768px) and (max-width: 1023px){
+                width: 90%;
+                margin: 0 auto;
+            }
         }
         
         &__item {
             text-align: center;
             padding: 60px 44px 44px;
-            max-width: 380px;
-            width: 100%;
+            width: 80%;
 
-            @media (max-width: 768px) {
+            @media (min-width: 768px) and (max-width: 1023px){
+                padding: 10px 100px;
+                max-width: 720px;
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            @media (max-width: 767px) {
                 padding: 24px 24px 24px;
             }
 
@@ -33,12 +49,20 @@
                 background-image: url(../images/fundo_combo_plus.png);
                 background-repeat: no-repeat;
                 background-size: contain;
+
+                @media (min-width: 768px) and (max-width: 1023px){
+                    background-size: cover;
+                }
             }
 
             img {
                 height: 83px;
 
-                @media (max-width: 768px) {
+                @media (min-width: 768px) and (max-width: 1023px){
+                height: 150px;
+            }
+
+                @media (max-width: 767px) {
                     width: 100%;
                 }
             }

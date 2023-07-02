@@ -49,16 +49,25 @@ body {
 .text--big {
     @include text(18px);
 
-    @media (max-width: 768px) {
-        @include title(15px);
+    @media (min-width: 768px) and (max-width: 1023px) {
+        @include text(16px);
+        margin-bottom: 24px;
+    }
+
+    @media (max-width: 767px) {
+        @include text(15px);
     }
 }
 
 .text {
     @include text;
 
-    @media (max-width: 768px) {
-        @include text(14px);
+    @media (min-width: 768px) and (max-width: 1023px) {
+        @include text(13px)
+    }
+
+    @media (max-width: 767px) {
+        @include text(11px);
     }
 }
 
@@ -146,12 +155,21 @@ body {
     grid-template-columns: 1fr 1fr;
     align-items: center;
 
+    @media (min-width: 768px) and (max-width: 1023px) {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
     @media (max-width: 768px) {
         display: block;
     }
     
     img {
         max-width: 100%;
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            margin-bottom: 24px;
+        }
     }
     
     &__text_container {
@@ -168,6 +186,10 @@ body {
 
         img {
             width: 100%;
+
+            @media (min-width: 768px) and (max-width: 1023px) {
+                margin-bottom: 30px;
+            }
         }
 
         &__text_container {
@@ -180,7 +202,15 @@ body {
             flex-direction: column;
             justify-content: center;
 
-            @media (max-width: 768px) {
+            @media (min-width: 768px) and (max-width: 1023px) {
+                top: 90%;
+                left: 10%;
+                width: calc(50% + 30vw);
+                display: block;
+                text-align: center;
+            }
+
+            @media (max-width: 767px) {
                 position: relative;
                 left: 0;
                 width: 100%;
